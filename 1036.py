@@ -12,22 +12,22 @@ a = int(input("Digite o valor de A: "))
 b = int(input("Digite o valor de B: "))
 c = int(input("Digite o valor de C: "))
 
-if a < 0:
-    print("O a não pode ser menor que 0")
-
-delta = ((b)**2) - 4 * (a * c)
-
-if delta < 0:
-    print("A raiz quadrada de delta não pode ser negativa")
-
-if delta > 0:
-    print(f"A raiz quadra do delta é {math.sqrt(delta):.2f}")
-    x1 = (-b + math.sqrt(delta)) / (2 * a)
-    x2 = (-b - math.sqrt(delta)) / (2 * a)
-    print(f"O cálculo do X1 é {x1:.2f}")
-    print(f"O cálculo do X2 é {x2:.2f}")
+if a > 0:
+    delta = ((b)**2) - 4 * (a * c)
+    
+    if delta < 0:
+        print("A raiz quadrada de delta não pode ser negativa")
+    
+    if delta > 0:
+        print(f"A raiz quadra do delta é {math.sqrt(delta):.2f}")
+        x1 = (-b + math.sqrt(delta)) / (2 * a)
+        x2 = (-b - math.sqrt(delta)) / (2 * a)
+        print(f"O cálculo do X1 é {x1:.2f}")
+        print(f"O cálculo do X2 é {x2:.2f}")
+    else:
+        print("Por conta da raiz quadrada de delta ser negativa, não é possível calcular a bhaskara")
 else:
-    print("Por conta da raiz quadrada de delta ser negativa, não é possível calcular a bhaskara")
+    print("O a não pode ser menor que 0")
 
 
 
